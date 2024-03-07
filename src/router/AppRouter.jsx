@@ -10,9 +10,6 @@ export const AppRouter = () => {
 
     const authStatus = 'authenticated'; //'authenticated'; 
 
-
-    console.log(getEnvVariables());
-
   return (
     <Routes>
         {
