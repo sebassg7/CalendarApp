@@ -25,8 +25,6 @@ export const useAuthStore = () => {
         };
     };
 
-    //startRegister
-
     const startRegister = async({ name, email, password }) => {
 
         try {
@@ -60,14 +58,20 @@ export const useAuthStore = () => {
         }
     };
 
+    const startLogout = () => {
+        localStorage.clear();
+        dispatch( onLogout() );
+    };
+
     return{
         //*Properties
         status, 
         user, 
         errorMessage,
         //*Methods
+        checkAuthToken,
         startLogin,
-        startRegister,
-        checkAuthToken
+        startLogout,
+        startRegister
     };
 };
