@@ -32,8 +32,15 @@ export const useCalendarStore = () => {
         };
     };
 
-    const startDeletingEvent =() => {
-        dispatch(onDeleteEvent())
+    const startDeletingEvent =async() => {
+        
+        try {
+                await calendarApi.delete(`/events/${activeEvent.id}`);
+                dispatch(onDeleteEvent());
+        } catch (error) {
+            console.log( error );
+            Swal.fire( 'Error al borrar', 'No tienes el permiso para borrar este evento', 'error' );
+        };
     };
 
     const startLoadingEvents = async() => {
