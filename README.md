@@ -11,7 +11,7 @@ VITE_API_URL=http://localhost:4000/api
 
 ```
 
-#Descripción de la aplicación
+# Descripción de la aplicación
 
 La aplicación de Calendario de Eventos proporciona una interfaz intuitiva basada en un calendario, donde los usuarios pueden gestionar y registrar eventos de manera eficiente. Las principales características de la aplicación incluyen:
 
